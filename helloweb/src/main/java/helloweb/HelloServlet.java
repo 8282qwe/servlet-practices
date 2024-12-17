@@ -13,6 +13,10 @@ public class HelloServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        String id = req.getParameter("id");
+        String no = req.getParameter("no");
+
+        System.out.println(id + " : " + no);
         res.setContentType("text/html; charset=utf-8");
         PrintWriter out = res.getWriter();
         out.println("<h1>Hello Servlet World</h1>");
